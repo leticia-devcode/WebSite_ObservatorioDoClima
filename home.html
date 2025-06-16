@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Observatório do Clima</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+  <!-- /favicon -->
+  <!-- Biblioteca -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- /Biblioteca -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header>
+
+    <!-- BARRA SUPERIOR COM ÍCONES -->
+    <div class="top-bar">
+      <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <div class="lang">
+        <a href="#">PT</a> | <a href="#">EN</a>
+      </div>
+    </div>
+
+    <!-- CONTAINER DO MENU PRINCIPAL -->
+    <div class="menu-container">
+      <a href="home.html">
+        <div class="logo"><img src="https://www.oc.eco.br/wp-content/themes/observatorio-clima_2022/images/logo.png"
+            alt="logo"></div>
+      </a>
+
+      <!-- BOTÃO HAMBURGUER -->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <!-- <div></div> -->
+        <!-- <div></div>
+        <div></div> -->
+      </div>
+
+      <!-- MENU PRINCIPAL -->
+      <ul class="navbar" id="menu">
+        <li>
+          <a href="#">Sobre o OC ▾</a>
+          <div class="dropdown-content">
+            <a href="membros.html">Nossos membros</a>
+            <a href="#">Nossa equipe</a>
+            <a href="#">Nossa história</a>
+            <a href="#">Premissas e príncipios</a>
+            <a href="#">Atuação e governança</a>
+          </div>
+        </li>
+        <span class="separator">|</span>
+        <li>
+          <a href="#">Nossas Iniciativas ▾</a>
+          <div class="dropdown-content">
+            <a href="#">SEEG</a>
+            <a href="#">GT Clima e Oceano</a>
+            <a href="#">GT Gênero e Clima</a>
+            <a href="#">Fakebook.eco.br</a>
+            <a href="#">Monitor 2045</a>
+            <a href="#">Será que vai chover?</a>
+            <a href="#">Central da COP</a>
+          </div>
+        </li>
+        <span class="separator">|</span>
+        <li>
+          <a href="#">Notícias ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Opinião</a>
+          </div>
+        </li>
+        <span class="separator">|</span>
+        <li><a href="#">Publicações</a></li>
+        <span class="separator">|</span>
+        <li><a href="#">Imprensa</a></li>
+        <span class="separator">|</span>
+        <li><a href="#">Atuação Jurídica</a></li>
+        <span class="separator">|</span>
+        <li><a href="#">Contato</a></li>
+        <a href="#"><i class="fas fa-search"></i></a>
+      </ul>
+    </div>
+
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- carrossel1 -->
+
+  <div class="image-slider">
+    <div class="slider-container">
+      <img src="https://www.oc.eco.br/wp-content/uploads/2025/05/54469498450_2a444ea890_k-e1748355800511.jpg"
+        alt="Imagem 1">
+      <img src="https://www.oc.eco.br/wp-content/uploads/2025/05/sebastiao-salgado-genesis-04-1-e1748037643818.jpg"
+        alt="Imagem 2">
+      <img src="https://www.oc.eco.br/wp-content/uploads/2025/05/54549789820_5b0246c462_c.jpg" alt="Imagem 3">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- /fimcarrossel1 -->
+  <!-- carrossel 2 -->
+  <div class="carousel">
+    <button class="prev">&#10094;</button>
+    <div class="carousel-track">
+      <img src="https://www.oc.eco.br/wp-content/uploads/2021/03/350_mono.png" alt="Logo 1">
+      <img src="https://www.oc.eco.br/wp-content/uploads/2022/05/ActionAid-Logo-Branco1.png" alt="Logo 2">
+      <img src="https://www.oc.eco.br/wp-content/uploads/2022/05/Apib-LOGOS-Branco.png" alt="Logo 3">
+      <img src="https://www.oc.eco.br/wp-content/uploads/2022/05/Apib-LOGOS-Branco.png" alt="Logo 4">
+      <img src="https://www.oc.eco.br/wp-content/uploads/2023/05/Design-sem-nome-22-aspect-ratio-286-201.png"
+        alt="Logo 5">
+      <img src="https://www.oc.eco.br/wp-content/uploads/2021/03/Anga_mono.png" alt="Logo 6">
+    </div>
+    <button class="next">&#10095;</button>
+  </div>
+
+  <script src="script2.js"></script>
+
+  <!-- /carrossel 2 -->
+  <!-- noticias -->
+  <div class="news-container">
+    <!-- Card 1 -->
+    <div class="news-card">
+      <div class="tag tag-blue">#PRESS RELEASE</div>
+      <img src="https://www.oc.eco.br/wp-content/uploads/2025/05/54549789820_5b0246c462_c.jpg" alt="Marina Silva"
+        class="news-img" />
+      <h2 class="title title-blue">Nota de solidariedade à ministra Marina Silva</h2>
+      <p class="description">
+        O Observatório do Clima repudia ataques misóginos dos senadores Plínio Valério (PSDB-AM) e Marcos Rogério
+        (PL-RO) em aud…
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="news-card">
+      <div class="tag tag-orange">#NOTÍCIAS</div>
+      <img src="https://www.oc.eco.br/wp-content/uploads/2025/05/54469498450_2a444ea890_k-e1748355800511-1024x626.jpg"
+        alt="Lula e senador" class="news-img" />
+      <h2 class="title title-orange">Na newsletter: A blitzkrieg antiambiental a seis meses da COP30</h2>
+      <p class="description">
+        Edição da quinzena traz aprovação do PL 2.159 no Senado, comunicado da presidência do Ibama que dá luz verde à
+        licença p…
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="news-card">
+      <div class="tag tag-orange">#NOTÍCIAS</div>
+      <img
+        src="https://www.oc.eco.br/wp-content/uploads/2025/05/sebastiao-salgado-genesis-04-1-e1748037643818-1024x647.jpg"
+        alt="Sebastião Salgado" class="news-img" />
+      <h2 class="title title-orange">Morre Sebastião Salgado, um dos maiores fotógrafos da história</h2>
+      <p class="description">
+        Artista de 81 anos também ganhou notoriedade pela defesa da causa ambiental, da Amazônia, dos sem-terra e dos
+        povos indí…
+      </p>
+    </div>
+
+  </div>
+
+  <div class="news-container">
+    <!-- Card 1 -->
+    <div class="news-card">
+      <div class="tag tag-blue">#PRESS RELEASE</div>
+      <img src="https://www.oc.eco.br/wp-content/uploads/2025/05/54549789820_5b0246c462_c.jpg" alt="Marina Silva"
+        class="news-img" />
+      <h2 class="title title-blue">Nota de solidariedade à ministra Marina Silva</h2>
+      <p class="description">
+        O Observatório do Clima repudia ataques misóginos dos senadores Plínio Valério (PSDB-AM) e Marcos Rogério
+        (PL-RO) em aud…
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="news-card">
+      <div class="tag tag-orange">#NOTÍCIAS</div>
+      <img src="https://www.oc.eco.br/wp-content/uploads/2025/05/54469498450_2a444ea890_k-e1748355800511-1024x626.jpg"
+        alt="Lula e senador" class="news-img" />
+      <h2 class="title title-orange">Na newsletter: A blitzkrieg antiambiental a seis meses da COP30</h2>
+      <p class="description">
+        Edição da quinzena traz aprovação do PL 2.159 no Senado, comunicado da presidência do Ibama que dá luz verde à
+        licença p…
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="news-card">
+      <div class="tag tag-orange">#NOTÍCIAS</div>
+      <img
+        src="https://www.oc.eco.br/wp-content/uploads/2025/05/sebastiao-salgado-genesis-04-1-e1748037643818-1024x647.jpg"
+        alt="Sebastião Salgado" class="news-img" />
+      <h2 class="title title-orange">Morre Sebastião Salgado, um dos maiores fotógrafos da história</h2>
+      <p class="description">
+        Artista de 81 anos também ganhou notoriedade pela defesa da causa ambiental, da Amazônia, dos sem-terra e dos
+        povos indí…
+      </p>
+    </div>
+
+  </div>
+  <!-- /noticias -->
+  <!-- nossas redes -->
+  <div class="iniciativas">
+    <h1 class="iniciativas">
+      Nossas Iniciativas
+    </h1>
+  </div>
+  <div class="logo-grid">
+    <img src="https://www.oc.eco.br/wp-content/themes/observatorio-clima_2022/images/seeg.png" alt="SEEG Brasil">
+    <img src="https://www.oc.eco.br/wp-content/themes/observatorio-clima_2022/images/fakebook.png" alt="Fakebook.eco">
+    <img src="https://www.oc.eco.br/wp-content/themes/observatorio-clima_2022/images/genero_clima.png"
+      alt="Gênero e Justiça Climática">
+    <img src="https://www.oc.eco.br/wp-content/themes/observatorio-clima_2022/images/central-da-cop-logo.png"
+      alt="Central da COP">
+
+    <img src="https://www.oc.eco.br/wp-content/themes/observatorio-clima_2022/images/clima_oceano.png"
+      alt="Clima e Oceano">
+    <img src="https://www.oc.eco.br/wp-content/themes/observatorio-clima_2022/images/OC-M45-logo-preto.png"
+      alt="Monitor 2045">
+    <img src="https://www.oc.eco.br/wp-content/themes/observatorio-clima_2022/images/logo_SQVC.png"
+      alt="Será que vai chover?">
+  </div>
+
+
+  <!--/ nossas redes -->
+
+  <!-- footer -->
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+      <!-- COLUNA COM LOGO E LINKS LADO A LADO -->
+      <div class="coluna logo-e-links">
+        <div class="logo">
+          <img src="https://www.oc.eco.br/wp-content/themes/observatorio-clima_2022/images/footer_logo.png"
+            alt="Logo OC" />
+        </div>
+        <ul class="links-logo">
+          <li><a href="#">Quem somos</a></li>
+          <li><a href="#">Nossa história</a></li>
+          <li><a href="#">Nossos membros</a></li>
+          <li><a href="#">Nossa equipe</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUNA DO MEIO -->
+      <div class="coluna">
+        <ul>
+          <li><a href="#">Notícias</a></li>
+          <li><a href="#">Imprensa</a></li>
+          <li><a href="#">Publicações</a></li>
+          <li><a href="#">Atuação Jurídica</a></li>
+        </ul>
+      </div>
+
+      <!-- REDES SOCIAIS -->
+      <div class="coluna">
+        <h4>Redes sociais</h4>
+        <div class="icones-redes">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- /footer -->
+</body>
+
+</html>

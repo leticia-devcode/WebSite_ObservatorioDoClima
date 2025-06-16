@@ -1,0 +1,760 @@
+ /* RESET BÁSICO PARA TODOS OS ELEMENTOS */
+ * {
+   margin: 0;
+   /* remove margens externas */
+   padding: 0;
+   /* remove espaçamentos internos */
+   box-sizing: border-box;
+   /* inclui padding e border na largura total */
+ }
+
+ /* ESTILO DO CORPO DA PÁGINA */
+ body {
+   font-family: Arial, sans-serif;
+   /* define a fonte padrão */
+   background-color: #ffff;
+   /* cor de fundo clara */
+ }
+
+ /* CABEÇALHO (engloba top-bar e menu principal) */
+ header {
+   background-color: #f18700;
+   /* cor escura do cabeçalho */
+   color: white;
+   /* cor do texto no cabeçalho */
+   position: fixed;
+   /* fixa o header na tela */
+   top: 0;
+   /* fixa no topo */
+   left: 0;
+   /* alinha à esquerda */
+   width: 100%;
+   /* ocupa toda a largura */
+   z-index: 1000;
+   /* garante que fique acima dos outros elementos */
+ }
+
+ /* BARRA SUPERIOR COM ÍCONES DAS REDES SOCIAIS */
+ .top-bar {
+   display: flex;
+   /* coloca os ícones lado a lado */
+   justify-content: flex-end;
+   /* alinha os ícones à direita */
+   padding-right: 12%;
+   padding-top: 2%;
+   /* espaçamento interno superior/lateral */
+ }
+
+ .top-bar a {
+   color: white;
+   /* cor dos ícones */
+   margin-left: 10px;
+   /* espaçamento entre ícones */
+   font-size: 16px;
+   /* tamanho dos ícones */
+   transition: color 0.3s;
+   /* animação de troca de cor ao passar o mouse */
+ 
+ }
+ 
+
+ .top-bar a:hover {
+   color: #f6eeb4;
+   /* cor azul ao passar o mouse sobre o ícone */
+ }
+
+ /* CONTAINER DO MENU (logotipo + menu principal) */
+ .menu-container {
+   display: flex;
+   /* elementos lado a lado */
+   justify-content: space-between;
+   /* separa logo e menu */
+   align-items: center;
+   /* alinha verticalmente */
+   padding-left: 10%;
+   padding-right: 10%;
+   /* espaço interno do container */
+   height: fit-content;
+   flex-wrap: wrap;
+   /* permite quebra de linha em telas pequenas */
+
+ }
+
+ .logo img {
+   width: 100%;
+   height: auto;
+   padding-bottom: 0px;
+ }
+
+ .menu-container>.content {
+   display: flex;
+   flex-direction: column;
+ }
+
+ /* MENU PRINCIPAL EM FORMA DE LISTA HORIZONTAL */
+ .navbar {
+   display: flex;
+   list-style: none;
+   /* remove os marcadores da lista */
+ }
+
+ .navbar li {
+   position: relative;
+   /* permite posicionar dropdown abaixo */
+ }
+ 
+ .navbar a {
+   color: white;
+   /* cor do texto dos links */
+   font-size: 14px;
+   text-decoration: none;
+   /* remove sublinhado */
+   padding: 14px 20px;
+   /* espaçamento interno dos links */
+   display: block;
+   /* área clicável em bloco */
+ }
+
+ .navbar a:hover {
+   color: #f6eeb4;
+ }
+
+ /* MENU DROPDOWN */
+ .dropdown-content {
+   display: none;
+   /* esconde o dropdown inicialmente */
+   position: absolute;
+   /* posiciona abaixo do item pai */
+   background-color: orange;
+   /* cor de fundo escura */
+   min-width: 180px;
+   /* largura mínima */
+   top: 100%;
+   /* posiciona logo abaixo do link pai */
+   z-index: 1;
+   /* garante que fique acima de outros elementos */
+ }
+
+ .dropdown-content a {
+   color: white;
+   /* cor do texto */
+   padding: 0.5rem 0.75rem;
+   /* espaçamento interno dos itens */
+   display: block;
+   /* cada item ocupa linha inteira */
+ }
+
+ .dropdown-content a:hover {
+   color: #f6eeb4;
+   /* muda o fundo ao passar o mouse */
+ }
+
+ .navbar li {
+   display: flex;
+   padding: 0;
+ }
+
+ .navbar li:hover .dropdown-content {
+   display: block;
+   /* exibe o menu dropdown ao passar o mouse */
+ }
+
+ .separator {
+   color: rgba(255, 255, 255, 0.338);
+   padding-top: 8px;
+   font-size: 25px;
+ }
+
+ /* BOTÃO HAMBURGUER - VISÍVEL EM TELAS PEQUENAS */
+ .menu-toggle {
+   display: none;
+   /* não visível em telas grandes */
+   flex-direction: column;
+   /* empilha as barrinhas */
+   cursor: pointer;
+   /* muda o cursor para indicar clique */
+ }
+
+ .menu-toggle div {
+   width: 25px;
+   /* largura da barrinha */
+   height: 3px;
+   /* altura da barrinha */
+   background-color: white;
+   /* cor branca das barrinhas */
+   margin: 4px 0;
+   /* espaçamento entre as barrinhas */
+ }
+
+ /* MEDIA QUERY PARA TELAS ATÉ 768px */
+ @media (max-width: 768px) {
+   .navbar {
+     display: none;
+     /* oculta o menu inicialmente no mobile */
+     width: 100%;
+     /* ocupa toda a largura */
+     flex-direction: column;
+     /* itens em coluna */
+     background-color: #1a1a1a;
+     /* fundo igual ao do cabeçalho */
+   }
+
+   .navbar.show {
+     display: flex;
+     /* mostra o menu quando ativado */
+   }
+
+   .menu-toggle {
+     display: flex;
+     /* exibe o botão hamburguer no mobile */
+   }
+
+   .navbar li {
+     width: 100%;
+     /* cada item ocupa toda a linha */
+   }
+
+   .dropdown-content {
+     position: static;
+     /* dropdown segue o fluxo normal no mobile */
+   }
+ }
+
+ /* CONTEÚDO PRINCIPAL */
+/* carrossel 1 */
+ .image-slider {
+   margin-top: 100px;
+   /* ou pelo menos maior que a altura total do header */
+ }
+
+ /* carrossel1 */
+ .image-slider {
+   width: 100vw;
+   height: 80vh;
+   overflow: hidden;
+
+ }
+
+ .slider-container {
+
+   display: flex;
+   /* Importante para deixar as imagens em linha */
+   width: 300%;
+   /* Depende do número de imagens: 3 imagens = 300% */
+   height: 100%;
+   transition: transform 0.8s ease-in-out;
+ }
+
+ .slider-container img {
+   width: 100%;
+   /* Cada imagem ocupa a largura total da tela */
+   height: 100vh;
+   object-fit: cover;
+ }
+
+ .image-slider {
+   margin-top: 40px;
+ }
+
+ /* fim/carrossel1 *
+ /* carrossel 2 */
+ .carousel {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #6fc3a5; /* verde similar ao da imagem */
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:4% ;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 40px;
+}
+
+.carousel-track img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+}
+
+button.prev, button.next {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  padding: 0 10px;
+}
+
+ /* /carrossel 2 */
+
+/* notícias */
+ .news-container {
+   margin-left: 7em;
+   display: flex;
+   gap: 30px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+
+ .news-card {
+   width: 400px;
+   border-bottom: 3px solid transparent;
+ }
+
+ .news-img {
+   width: 100%;
+   height: auto;
+   display: block;
+ }
+
+ .tag {
+   font-size: 0.9rem;
+   font-weight: bold;
+   margin: 10px 0 5px;
+   display: inline-block;
+   padding: 4px 8px;
+   border-radius: 3px;
+   color: white;
+ }
+
+ .tag-blue {
+   background-color: #00b2a9;
+ }
+
+ .tag-orange {
+   background-color: #f9a825;
+ }
+
+ .title {
+   font-size: 1.4rem;
+   font-weight: bold;
+   margin: 10px 0;
+ }
+
+ .title-blue {
+   color: #00b2a9;
+ }
+
+ .title-orange {
+   color: #f9a825;
+ }
+
+ .description {
+   font-size: 1rem;
+   line-height: 1.5;
+   color: #1a1a1a;
+ }
+
+
+ /* /noticias */
+ /* iniciativas h1 */
+ .iniciativas h1 {
+   color: #f9a825;
+   margin-top: 4em;
+   margin-left: 6em;
+ }
+
+ /* footer */
+ footer {
+   background-color: green;
+ }
+
+
+ 
+ /* / main*/
+ main {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   padding: 0 10rem;
+ }
+/* menu secundário */
+ .menu-secundario {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   justify-content: center;
+ }
+
+
+ .menu-secundario>div {
+   display: flex;
+   flex-direction: row;
+
+   width: 100%;
+   padding: 0.75rem 1.5rem;
+   text-decoration: none;
+   background-color: rgba(188, 183, 183, 0.233);
+   color: #95c11f;
+ }
+
+ .menu-secundario>div:hover {
+   color: #b9d273;
+ }
+
+ .menu-secundario .selected {
+   background-color: #95c11f;
+   color: #fff;
+
+ }
+
+
+ div.logo2 {
+   margin-top: 5em;
+
+ }
+
+ div.logo2 h1 {
+   color: #f9b000;
+   font-size: 1.5rem;
+ }
+
+ img.logo2 {
+   padding-top: 20px;
+ }
+
+ .logo2>div {
+   display: flex;
+   justify-content: center;
+ }
+
+ .instituicoes-integrantes {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+
+   width: 100%;
+
+   gap: 1rem;
+ }
+
+ .instituicoes-integrantes>.instituicao {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+ }
+
+ .instituicoes-integrantes>.instituicao:hover {
+   background-color: #b9d273;
+
+   transition: ease-out 0.15s;
+ }
+
+
+
+ .clique-aqui {
+   border-radius: 2px;
+   background-color: #f18700;
+   width: 80%;
+   padding: 2rem 5em;
+ }
+
+ .clique-aqui p {
+   text-align: center;
+   color: #ffff;
+   font-size: 1.5rem;
+
+ }
+
+ .clique-aqui p a {
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+ }
+
+ .clique-aqui p a:hover {
+   color: #f6e1b1;
+ }
+
+ .newsletter {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   padding: 2rem 4em;
+ }
+
+ .newsletter h1,
+ p {
+   color: #fff;
+
+ }
+
+ .txt {
+   display: flex;
+   width: fit-content;
+   padding: 1rem;
+   border: 1px solid gray;
+   border-radius: 5%;
+ }
+
+ .txt>* {
+   width: fit-content;
+ }
+
+ .newsletterContent {
+   background-color: #f18700;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   padding: 2rem 4rem;
+ }
+
+ .newsletterContent .email {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+ }
+
+ .news-item>p {
+   color: black;
+ }
+
+ /* página de equipe */
+
+ .team {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+ }
+
+ .member {
+   max-width: 300px;
+   text-align: center;
+   margin: 20px;
+   padding: 0 5%;
+ }
+
+ .member img {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   border: 5px solid #8bc53f;
+   /* verde claro */
+   object-fit: cover;
+ }
+
+ .member h3 {
+   text-align: left;
+   margin: 5px 0 5px;
+   font-size: 1.2em;
+   color: #8bc53f;
+   /* verde claro */
+   font-weight: bold;
+ }
+
+ .member .role {
+   color: #8bc53f;
+   margin-bottom: 10px;
+   font-weight: 500;
+ }
+
+ .member p {
+   text-align: left;
+   color: #333;
+   font-size: 1em;
+   line-height: 1.4em;
+ }
+
+ /* /página de equipe */
+
+
+ /* nossas iniciativas */
+ .logo-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 40px;
+   padding-left: 16em;
+   margin-top: 2em;
+   max-width: 1200px;
+   width: 100%;
+   align-items: center;
+   justify-items: center;
+   cursor: pointer;
+ }
+
+
+ .logo-grid img {
+   max-width: 100%;
+   height: auto;
+   object-fit: contain;
+
+ }
+
+ .in-txt>h1 {
+   color: #f9b000;
+   text-align: left;
+ }
+
+ .in-txt {
+   text-align: left;
+   margin-right: 55em;
+   padding-top: 3%;
+ }
+
+ /* /nossas iniciativas */
+
+ /* formulario */
+ .newsletter {
+   margin-top: 2em;
+   position: relative;
+   background: linear-gradient(rgba(255, 102, 0, 0.7), rgba(255, 102, 0, 0.7)),
+     url('https://th.bing.com/th/id/OIP.flaryAs8ImrhVwWjxM8TRwHaHa?w=800&h=800&rs=1&pid=ImgDetMain') center/cover no-repeat;
+   color: white;
+   padding: 50px 20px;
+ }
+
+ .tab {
+   position: absolute;
+   top: -30px;
+   left: 20px;
+   color: #333;
+   padding: 10px 20px;
+   border: #1a1a1a;
+   border-radius: 5px 5px 0 0;
+   font-weight: bold;
+ }
+
+ .content h1 {
+   font-size: 2em;
+   margin-bottom: 10px;
+ }
+
+ .content p {
+   margin-bottom: 20px;
+ }
+
+ .form {
+   margin-top: 2em;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+ }
+
+ .form input[type="email"] {
+   padding: 10px;
+   font-size: 1em;
+   border: none;
+   border-radius: 4px 0 0 4px;
+   width: 250px;
+   max-width: 100%;
+ }
+
+ .form button {
+   padding: 10px 20px;
+   font-size: 1em;
+   border: none;
+   background-color: #ff6600;
+   color: white;
+   border-radius: 0 4px 4px 0;
+   cursor: pointer;
+   transition: background 0.3s;
+ }
+
+ .form button:hover {
+   background-color: #e65c00;
+ }
+
+ /* /formulario */
+
+ /* footer */
+ .rodape {
+   background-color: #fff;
+   padding: 40px 20px;
+   font-family: sans-serif;
+ }
+
+ .rodape .logo img {
+   border-top: 2px solid #d6d600;
+ }
+
+ .rodape-conteudo {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+
+ .coluna {
+   flex: 1 1 250px;
+   margin: 10px;
+ }
+
+ .logo-e-links {
+   display: flex;
+   align-items: flex-start;
+ }
+
+ .logo img {
+   height: 50px;
+   width: 100px;
+   margin-right: 30px;
+ }
+
+ .links-logo {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+ }
+
+ .links-logo li {
+   margin-bottom: 10px;
+ }
+
+ .links-logo li a {
+   color: #8cc63f;
+   text-decoration: none;
+   font-size: 16px;
+ }
+
+ .coluna ul {
+   list-style: none;
+   padding: 0;
+ }
+
+ .coluna ul li {
+   margin-bottom: 10px;
+ }
+
+ .coluna ul li a {
+   color: #b5d844;
+   text-decoration: none;
+   font-size: 16px;
+ }
+
+ .coluna h4 {
+   color: #333;
+   font-size: 20px;
+   border-top: 1px solid #b5d844;
+   padding-top: 10px;
+   margin-bottom: 10px;
+ }
+
+ .icones-redes {
+   margin-top: 3em;
+   color: #d6d600;
+ }
+
+ .icones-redes a {
+   color: #b5d844;
+   font-size: 15px;
+   margin-right: 15px;
+   text-decoration: none;
+ }
+
+ .icones-redes a:hover {
+   color: #6ea52f;
+ }
+
+
+ /* /footer */
