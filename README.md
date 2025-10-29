@@ -1,26 +1,21 @@
-# observatorio_clima
-Aqui está um exemplo de `README.md` para o site educacional que você criou com HTML, CSS e JavaScript, com base nos arquivos enviados (`home.html`, `equipe.html`, `membros.html`, `style.css`, `script.js`, `script2.js`):
+🌱 Observatório do Clima — Site Educacional
 
----
+O Observatório do Clima é um projeto educacional desenvolvido com HTML, CSS e JavaScript, que simula o site institucional do Observatório do Clima (OC).
+Seu propósito é exercitar habilidades de desenvolvimento front-end, explorando conceitos de navegação, estrutura de páginas e interatividade com menus e carrosséis.
 
-```markdown
-# 🌱 Observatório do Clima — Site Educacional
-
-Este projeto é uma simulação educacional de um site institucional inspirado no **Observatório do Clima (OC)**, desenvolvido com HTML, CSS e JavaScript. Seu objetivo é oferecer prática em desenvolvimento web front-end com foco em navegação, estrutura de páginas e interações simples com carrosséis e menus.
-
-## 🔎 Visão Geral
+🔍 Visão Geral
 
 O site é composto por três páginas principais:
 
-- **Home (`home.html`)**: Apresenta carrosséis de imagens e notícias, além de informações sobre iniciativas climáticas.
-- **Membros (`membros.html`)**: Exibe as instituições participantes do Observatório.
-- **Equipe (`equipe.html`)**: Apresenta os membros da equipe com imagens e biografias curtas.
+Home (home.html) — apresenta carrosséis de imagens e notícias sobre iniciativas climáticas.
 
-## 🧱 Estrutura do Projeto
+Membros (membros.html) — exibe as instituições participantes do observatório.
 
-```
+Equipe (equipe.html) — mostra os membros da equipe com fotos e pequenas biografias.
 
-📁 projeto/
+🧱 Estrutura do Projeto
+
+📁 observatorio_clima/
 ├── home.html
 ├── membros.html
 ├── equipe.html
@@ -28,46 +23,64 @@ O site é composto por três páginas principais:
 ├── script.js
 ├── script2.js
 
-```
+🎨 Tecnologias Utilizadas
 
-## 🎨 Tecnologias Utilizadas
+HTML5 — estrutura semântica das páginas.
 
-- **HTML5**: Estrutura semântica das páginas.
-- **CSS3**: Estilização com responsividade e design moderno.
-- **JavaScript (Vanilla)**: Interações nos carrosséis e no menu responsivo.
-- **Bibliotecas externas**:
-  - Font Awesome e Bootstrap Icons (ícones sociais e decorativos).
+CSS3 — estilização e responsividade.
 
-## 📌 Funcionalidades
+JavaScript (Vanilla) — interações dinâmicas (carrosséis e menus).
 
-- Menu dropdown com navegação entre seções.
-- Dois tipos de carrossel:
-  - **Carrossel de imagens** automático (JavaScript puro).
-  - **Carrossel de logos** com botões de navegação lateral.
-- Exibição dinâmica de membros e instituições.
-- Newsletter fictícia no rodapé.
+Bibliotecas externas:
 
-## ⚠️ Observações
+Font Awesome e Bootstrap Icons — ícones sociais e decorativos.
 
-- Este projeto é **puramente educacional** e **não está associado oficialmente ao Observatório do Clima**.
-- As imagens e textos utilizados foram retirados do site original com fins de aprendizado.
-- Nenhuma funcionalidade de back-end está implementada (formulários não enviam dados).
+🚀 Funcionalidades
 
-## 🛠️ Como usar
+Menu dropdown responsivo para navegação entre seções.
 
-1. Faça o download ou clone o repositório.
-2. Abra `home.html` com um navegador moderno.
-3. Navegue entre as páginas pelo menu principal.
+Dois tipos de carrossel:
 
-## 📷 Pré-visualização
+Carrossel de imagens automático em JavaScript puro.
 
-![Exemplo da Home](https://www.oc.eco.br/wp-content/uploads/2025/05/54469498450_2a444ea890_k-e1748355800511.jpg)
+Carrossel de logos com botões laterais.
 
-## 📄 Licença
+Exibição dinâmica de membros e instituições.
 
-Este projeto é livre para fins acadêmicos e educacionais. Você pode adaptá-lo conforme necessário, desde que mantenha os créditos e utilize com responsabilidade.
+Rodapé com formulário fictício de newsletter.
 
----
-```
+⚠️ Observações
 
-Se quiser, posso gerar esse `README.md` em arquivo `.md` ou `.txt` para download. Deseja isso?
+📚 Este projeto é exclusivamente educacional e não possui vínculo oficial com o Observatório do Clima.
+As imagens e textos utilizados são de uso didático, sem fins comerciais.
+Não há integração com back-end (os formulários não enviam dados reais).
+
+💾 Como Baixar e Executar o Projeto
+🔸 Opção 1 — Baixar ZIP
+
+Clique em Code ▾ no topo do repositório.
+
+Selecione Download ZIP.
+
+Extraia o arquivo em seu computador.
+
+Abra o arquivo home.html em qualquer navegador moderno (Chrome, Edge, Firefox, etc.).
+
+🔸 Opção 2 — Clonar via Git
+
+git clone https://github.com/seuusuario/observatorio_clima.git
+
+cd observatorio_clima
+
+Depois, basta abrir o arquivo home.html no navegador.
+
+📷 Pré-visualização
+
+📄 Licença
+Este projeto é de uso livre para fins acadêmicos e educacionais.
+Sinta-se à vontade para adaptá-lo, desde que mantenha os créditos e respeite os direitos de uso das imagens originais.
+
+
+💚 Projeto criado com foco em aprendizado e boas práticas de desenvolvimento web front-end.
+
+
