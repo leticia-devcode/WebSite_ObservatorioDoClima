@@ -16,6 +16,7 @@ Equipe (equipe.html) — mostra os membros da equipe com fotos e pequenas biogra
 🧱 Estrutura do Projeto
 
 📁 observatorio_clima/
+
 ├── home.html
 ├── membros.html
 ├── equipe.html
